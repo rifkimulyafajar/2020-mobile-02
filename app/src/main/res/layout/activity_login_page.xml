@@ -6,28 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".LoginPageActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="455dp"
-        android:layout_height="404dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/red_rectangle" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="8dp"
         android:text="Continuing as"
         android:textColor="#000"
         android:textSize="30sp"
         app:fontFamily="@font/futura_pt_demibold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/view"
+        tools:layout_editor_absoluteY="351dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -53,6 +44,7 @@
         android:text="Login"
         android:textColor="#F44336"
         android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -79,6 +71,7 @@
         android:text="Register"
         android:textColor="#fff"
         android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -88,9 +81,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/btn_white_large"
+        android:drawableStart="@drawable/google_logo"
+        android:drawableLeft="@drawable/google_logo"
+        android:paddingLeft="16dp"
         android:text="Continue With Google"
         android:textColor="#F44336"
         android:textSize="14sp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -101,8 +98,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/btn_blue_large"
+        android:drawableStart="@drawable/fb_logo"
+        android:drawableLeft="@drawable/fb_logo"
+        android:paddingLeft="16dp"
         android:text="Continue With Facebook"
         android:textColor="#3F51B5"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -111,13 +112,15 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Enter as a gust"
+        android:layout_marginBottom="16dp"
+        android:text="Enter as a guest"
         android:textSize="18sp"
         app:fontFamily="@font/futura_pt_demibold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        app:layout_constraintVertical_bias="0.18" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -127,34 +130,41 @@
         android:layout_marginLeft="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/button6"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/button6"
-        app:srcCompat="@drawable/fb_logo" />
+        app:layout_constraintTop_toTopOf="@+id/button6" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/red_rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/button5"
-        app:srcCompat="@drawable/google_logo" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="37dp"
-        android:layout_height="32dp"
+        android:id="@+id/imageView7"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
